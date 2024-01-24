@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='w-full h-screen flex flex-col'>
       <Navbar />
-      <div className='flex flex-row '>
+      <div className='flex flex-row bg-red-200 h-screen'>
         <Carousel />
         <ProductDescription />
       </div>
