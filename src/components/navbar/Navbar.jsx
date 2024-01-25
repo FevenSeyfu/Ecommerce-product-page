@@ -23,7 +23,7 @@ const Navbar = () => {
   // toggle mobile menu
   const handleClick = () => setNav(!nav);
 
-  const HandleToggleCart = () => setNav(!toggleCart);
+  const HandleToggleCart = () =>setToggleCart(!toggleCart);
   return (
     <>
       <div className="flex flex-row justify-between items-center px-8 py-4 md:py-6 border-b shadow-md shadow-gray-50">
@@ -85,8 +85,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4">
-          <CartIcon 
-            itemCount={itemCount} />
+         <button onClick={HandleToggleCart} className="z-10">
+            <CartIcon itemCount={itemCount}/>
+         </button>
           <img
             src="src/assets/image-avatar.png"
             alt="user avatar"
@@ -94,7 +95,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <CartModal cart={cart} />
+      {toggleCart && (<CartModal cart={cart} />)}
     </>
   );
 };
