@@ -29,9 +29,9 @@ const Carousel = ({ images }) => {
   };
   return (
     <div className="flex flex-col items-center justify-center md:w-2/4 md:p-8">
-      <div className="relative h-[20rem] w-full md:w-[20rem] mx-auto  overflow-hidden">
+      <div className="relative h-[20rem] w-full md:shadow-md shadow-gray-400 md:w-[30rem] md:rounded-lg mx-auto  overflow-hidden">
         <img
-          className="h-full w-full object-cover md:rounded-lg"
+          className="h-full w-full object-cover"
           src={selectedImage}
           alt="Selected Product"
           onClick={() => {
@@ -62,7 +62,7 @@ const Carousel = ({ images }) => {
         {images.map((img, index) => (
           <li
             key={index}
-            className={`mx-2 h-16 w-16 ${
+            className={`mx-3 h-20 w-24 ${
               selectedImage === img
                 ? "border-2 border-primary-orange rounded-lg"
                 : ""
@@ -70,8 +70,8 @@ const Carousel = ({ images }) => {
             onClick={() => handleImageChange(img)}
           >
             <img
-              className={`h-full w-full object-cover rounded-md hover:opacity-80 ${
-                selectedImage === img ? "opacity-50" : ""
+              className={`h-full w-full object-cover rounded-md hover:opacity-50 ${
+                selectedImage === img ? "opacity-30" : ""
               }`}
               src={img}
               alt={`Product ${index + 1}`}
