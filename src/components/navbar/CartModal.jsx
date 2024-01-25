@@ -17,7 +17,7 @@ const CartModal = ({ cart }) => {
               <ul className="flex flex-col w-full" key={item.id}>
                 <li className="flex flex-row justify-between items-center gap-4 text-gray-500 text-md">
                   <img
-                    src={item.img}
+                    src={item.img[0]}
                     alt="product image"
                     className="h-12 rounded-md"
                   />
