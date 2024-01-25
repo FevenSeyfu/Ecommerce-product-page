@@ -1,21 +1,32 @@
 import React, { useState } from "react";
+import IconPrevious from "../icon/IconPrevious";
+import IconNext from "../icon/IconNext";
+import CarousleModal from "./CarousleModal";
 
 const Carousel = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [toggleView, setToggleView] = useState(false);
 
   const handleImageChange = (img) => {
     setSelectedImage(img);
   };
   const previousImg = () => {
     const currentIndex = images.indexOf(selectedImage);
-    setSelectedImage(currentIndex === 0 ? images[images.length - 1] : images[currentIndex - 1]);
+    setSelectedImage(
+      currentIndex === 0 ? images[images.length - 1] : images[currentIndex - 1]
+    );
   };
-  
+
   const nextImg = () => {
     const currentIndex = images.indexOf(selectedImage);
-    setSelectedImage(currentIndex === images.length - 1 ? images[0] : images[currentIndex + 1]);
+    setSelectedImage(
+      currentIndex === images.length - 1 ? images[0] : images[currentIndex + 1]
+    );
   };
-  
+
+  const toggleModal = () => {
+    setToggleView(!toggleView);
+  };
   return (
     <div className="flex flex-col items-center justify-center md:w-2/4 md:p-8">
       <div className="relative h-[20rem] w-full md:w-[20rem] mx-auto  overflow-hidden">
@@ -23,22 +34,26 @@ const Carousel = ({ images }) => {
           className="h-full w-full object-cover md:rounded-lg"
           src={selectedImage}
           alt="Selected Product"
+          onClick={() => {
+            if (window.innerWidth > 768) {
+              toggleModal();
+            }
+          }}
         />
+        <CarousleModal images={images} toggleView={toggleView} toggleModal={toggleModal} />
       </div>
       <div className="md:hidden">
-        <button onClick={previousImg}>
-          <img
-            src="src/assets/icon-previous.svg"
-            alt="Previous button"
-            className="bg-white absolute top-[12rem] left-[1rem] rounded-full px-4 py-3"
-          />
+        <button
+          onClick={previousImg}
+          className="bg-white  absolute top-[12rem] left-[1rem] rounded-full p-4"
+        >
+          <IconPrevious />
         </button>
-        <button onClick={nextImg}>
-          <img
-            src="src/assets/icon-next.svg"
-            alt="Next button"
-            className="bg-white absolute top-[12rem] right-[1rem] rounded-full px-4 py-3"
-          />
+        <button
+          onClick={nextImg}
+          className="bg-white  absolute top-[12rem] right-[1rem] rounded-full p-4"
+        >
+          <IconNext />
         </button>
       </div>
 
