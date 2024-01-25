@@ -16,6 +16,7 @@ export default {
         'neutral-darkGrayish-blue': 'hsl(219, 9%, 45%)',
         'neutral-bright-blue': 'hsl(220, 14%, 75%)',
         'neutral-bright-red': 'hsl(223, 64%, 98%)',
+        'gray-link' : 'hsl(228, 45%, 44%)'
       },
     },
   },

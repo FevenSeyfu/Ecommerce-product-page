@@ -10,11 +10,12 @@ const Navbar = () => {
     {
       id: 1,
       name: "Fall Limited Edition Sneakers",
-      description:'Lorem ipsum dolor sit amet consectetur adipiscing elit, sagittis class habitant',
-      img : 'src/assets/image-product-1-thumbnail.jpg',
-      price: 125.00,
-      quantity:3,
-      discount:50
+      description:
+        "These low-profile sneakers are your perfect casual wear companion. Featuring a  durable rubber outer sole, they'll withstand everything the weather can offer.",
+      img: "src/assets/image-product-1-thumbnail.jpg",
+      price: 125.0,
+      quantity: 3,
+      discount: 50,
     },
   ]);
   const [nav, setNav] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
   // toggle mobile menu
   const handleClick = () => setNav(!nav);
 
-  const HandleToggleCart = () =>setToggleCart(!toggleCart);
+  const HandleToggleCart = () => setToggleCart(!toggleCart);
   return (
     <>
       <div className="flex flex-row justify-between items-center px-8 py-4 md:py-6 border-b shadow-md shadow-gray-50">
@@ -85,9 +86,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4">
-         <button onClick={HandleToggleCart} className="z-5">
-            <CartIcon itemCount={itemCount}/>
-         </button>
+          <button onClick={HandleToggleCart} className="z-5">
+            <CartIcon itemCount={itemCount} />
+          </button>
           <img
             src="src/assets/image-avatar.png"
             alt="user avatar"
@@ -95,7 +96,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-      {toggleCart && (<CartModal cart={cart} />)}
+      {toggleCart && <CartModal cart={cart} />}
     </>
   );
 };
