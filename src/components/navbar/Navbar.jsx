@@ -85,7 +85,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4">
-         <button onClick={HandleToggleCart} className="z-10">
+         <button onClick={HandleToggleCart} className="z-5">
             <CartIcon itemCount={itemCount}/>
          </button>
           <img
