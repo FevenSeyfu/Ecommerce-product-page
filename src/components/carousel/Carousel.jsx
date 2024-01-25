@@ -8,11 +8,11 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="w-2/4 flex flex-col items-center justify-center p-8">
-      <div className="relative h-[20rem] w-[20rem] mx-auto rounded-lg overflow-hidden">
-        <img className="h-full w-full object-cover" src={selectedImage} alt="Selected Product" />
+    <div className="flex flex-col items-center justify-center md:w-2/4 md:p-8">
+      <div className="relative h-[20rem] w-full md:w-[20rem] mx-auto  overflow-hidden">
+        <img className="h-full w-full object-cover md:rounded-lg" src={selectedImage} alt="Selected Product" />
       </div>
-      <ul className="flex justify-center w-full mt-4">
+      <ul className="hidden md:flex justify-center w-full mt-4">
         {images.map((img, index) => (
           <li
             key={index}

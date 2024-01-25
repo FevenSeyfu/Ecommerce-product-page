@@ -8,7 +8,7 @@ const App = () => {
     <div className="w-full h-screen flex flex-col">
       <Navbar />
       {cart.map((item) => (
-      <div className="flex flex-row h-screen" key={item.id}>
+      <div className="flex flex-col w-full  md:flex-row h-screen" key={item.id}>
         <Carousel images={item.images}/>
         <ProductDescription item={item}/>
       </div>
