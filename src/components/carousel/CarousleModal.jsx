@@ -62,7 +62,7 @@ const CarousleModal = ({ images, toggleView, toggleModal }) => {
           {images.map((img, index) => (
             <li
               key={index}
-              className={`mx-2 h-16 w-16 ${
+              className={`mx-3 h-20 w-20 ${
                 selectedImage === img
                   ? "border-2 border-primary-orange rounded-lg"
                   : ""
