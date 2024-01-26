@@ -10,9 +10,9 @@ export default {
       {
         //Primary
         'primary-orange': 'hsl(26, 100%, 55%)',
-        'primary-pale-orange': 'hsl(25, 100%, 94%)',
+        'primary-pale-orange': 'hsl(25, 100%, 74%)',
         // neutral
-        'neutral-dark blue': 'hsl(220, 13%, 13%)',
+        'neutral-dark-blue': 'hsl(220, 13%, 13%)',
         'neutral-darkGrayish-blue': 'hsl(219, 9%, 45%)',
         'neutral-bright-blue': 'hsl(220, 14%, 75%)',
         'neutral-bright-red': 'hsl(223, 64%, 98%)',
