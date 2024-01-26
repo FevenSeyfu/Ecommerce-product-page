@@ -16,7 +16,7 @@ const Navbar = () => {
   const HandleToggleCart = () => setToggleCart(!toggleCart);
   return (
     <>
-      <div className="flex flex-row justify-between items-center px-8 py-4 md:py-6 border-b shadow-md shadow-gray-50">
+      <div className="flex flex-row justify-between items-center px-8 py-4 md:pt-6 md:pb-0 border-b shadow-md shadow-gray-50">
         <div className="flex flex-row gap-4 md:gap-6 items-center">
           <button className="md:hidden z-10" onClick={handleClick}>
             <img
@@ -25,6 +25,7 @@ const Navbar = () => {
               className="h-6"
             />
           </button>
+          {/* Mobile menu */}
           <Modal
             isOpen={nav}
             contentLabel="Mobile Menu"
@@ -54,22 +55,22 @@ const Navbar = () => {
               </li>
             </ul>
           </Modal>
-          <img src="src/assets/logo.svg" alt="logo" />
+          <img src="src/assets/logo.svg" alt="logo"  className="md:pb-6"/>
 
           <ul className="hidden md:flex flex-row gap-4 text-gray-700">
-            <li>
+            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
               <a href="#">Collections</a>
             </li>
-            <li>
+            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
               <a href="#">Men</a>
             </li>
-            <li>
+            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
               <a href="#">Women</a>
             </li>
-            <li>
+            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
               <a href="#">About</a>
             </li>
-            <li>
+            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
               <a href="#">Contact</a>
             </li>
           </ul>
