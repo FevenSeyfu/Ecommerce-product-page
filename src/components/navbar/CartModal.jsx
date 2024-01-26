@@ -3,8 +3,8 @@ import { FaRegTrashCan } from "react-icons/fa6";
 
 const CartModal = ({ cart }) => {
   return (
-    <div className="absolute top-[5rem] md:top-[4rem] mx-2 rounded-2xl shadow-2xl shadow-neutral-700  w-[95vw] md:right-0 md:w-[25rem] bg-white h-[16rem] z-10">
-      <h1 className="h-16 p-4 font-extrabold text-2xl text-black">Cart</h1>
+    <div className="absolute top-[5rem] md:top-[4rem] mx-2 rounded-2xl shadow-2xl shadow-neutral-700  h-[14rem] w-[95vw] md:right-0 md:w-[25rem] bg-white md:h-[16rem] z-10">
+      <h1 className="h-12 md:h-16 p-2 md:p-4 font-extrabold text-2xl text-black">Cart</h1>
       <hr className="w-full shadow-md text-gray-900 " />
       <div className="flex flex-col items-center ">
         {cart.length === 0 ? (
@@ -12,7 +12,7 @@ const CartModal = ({ cart }) => {
             Your Cart is empty.
           </h1>
         ) : (
-          <div className="m-4 flex flex-col gap-4">
+          <div className="flex flex-col m-2 gap-2 md:m-4 md:gap-4">
             {cart.map((item) => (
               <ul className="flex flex-col w-full mt-2" key={item.id}>
                 <li className="flex flex-row justify-between items-center gap-4 text-gray-500 text-md">
