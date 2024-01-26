@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import IconCart from "./icon/IconCart";
 
 const ProductDescription = ({ item }) => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(item.quantity);
   let OriginalPrice = (item.price / (1 - item.discount / 100)).toFixed(2);
 
   const addItem = () => {
