@@ -29,7 +29,11 @@ const CarousleModal = ({ images, toggleView, toggleModal }) => {
       isOpen={toggleView}
       contentLabel="product preview"
       onRequestClose={toggleModal}
-      className="bg-transparent w-[60vw]"
+      className="ProductModal bg-transparent  w-[60vw]"
+      style={{
+        border: 0,
+        transition: "none",
+      }}
       overlayClassName="fixed top-0 left-0 w-full h-full bg-black bg-opacity-85 flex justify-center items-center"
       shouldCloseOnOverlayClick={true}
     >

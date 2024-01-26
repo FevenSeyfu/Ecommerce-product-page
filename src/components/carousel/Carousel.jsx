@@ -29,7 +29,7 @@ const Carousel = ({ images }) => {
   };
   return (
     <div className="flex flex-col items-center justify-center md:w-2/4 md:p-8">
-      <div className="relative h-[20rem] w-full md:shadow-md shadow-gray-400 md:w-[30rem] md:rounded-lg mx-auto  overflow-hidden">
+      <div className="relative h-[20rem] w-full md:shadow-md shadow-gray-400 md:w-[40vw] md:rounded-lg mx-auto  overflow-hidden">
         <img
           className="h-full w-full object-cover"
           src={selectedImage}
