@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import IconCart from "./icon/IconCart";
+import IconMinus from "../assets/icon-minus.svg";
+import IconPlus from "../assets/icon-plus.svg";
 
 const ProductDescription = ({ item }) => {
   const [count, setCount] = React.useState(item.quantity);
@@ -41,7 +43,7 @@ const ProductDescription = ({ item }) => {
               onClick={removeItem}
             >
               <img
-                src="src/assets/icon-minus.svg"
+                src={IconMinus}
                 alt="Minus Icon"
                 className="mx-auto"
               />
@@ -54,7 +56,7 @@ const ProductDescription = ({ item }) => {
               onClick={addItem}
             >
               <img
-                src="src/assets/icon-plus.svg"
+                src={IconPlus}
                 alt="Plus Icon"
                 className="mx-auto"
               />
