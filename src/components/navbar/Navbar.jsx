@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import CartIcon from "./CartIcon";
+import IconMenu from "../../assets/icon-menu.svg";
+import IconClose from "../../assets/icon-close.svg";
+import IconLogo from "../../assets/logo.svg"; 
+import AvatarImage from "../../assets/image-avatar.png"; 
 import Modal from "react-modal";
 import CartModal from "./CartModal";
 import cart from "../../cart.js"
 Modal.setAppElement("#root");
 
 const Navbar = () => {
-  // const [cart, setCart] = useState(cart);
   const [nav, setNav] = useState(false);
   const [toggleCart, setToggleCart] = useState(false);
   const itemCount = cart.reduce((count, item) => count + item.quantity, 0);
@@ -20,7 +23,7 @@ const Navbar = () => {
         <div className="flex flex-row gap-4 md:gap-6 items-center">
           <button className="md:hidden z-10" onClick={handleClick}>
             <img
-              src={`src/assets/${!nav ? "icon-menu" : "icon-close"}.svg`}
+              src={!nav ? IconMenu : IconClose }
               alt="mobile menu menu"
               className="h-6"
             />
@@ -55,7 +58,7 @@ const Navbar = () => {
               </li>
             </ul>
           </Modal>
-          <img src="src/assets/logo.svg" alt="logo"  className="md:pb-6"/>
+          <img src={IconLogo} alt="logo"  className="md:pb-6"/>
 
           <ul className="hidden md:flex flex-row gap-4 text-gray-700">
             <li className="hover:border-b-2 hover:border-primary-orange pb-6">
@@ -80,7 +83,7 @@ const Navbar = () => {
             <CartIcon itemCount={itemCount} />
           </button>
           <img
-            src="src/assets/image-avatar.png"
+            src={AvatarImage}
             alt="user avatar"
             className="h-8"
           />
