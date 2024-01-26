@@ -1,4 +1,8 @@
-![Mobile](https://github.com/FevenSeyfu/Ecommerce-product-page/blob/main/screenshots/Desktop.png){: width="50%" height="auto"}![Mobile](https://github.com/FevenSeyfu/Ecommerce-product-page/blob/main/screenshots/mobile_1.png){: width="50%" height="auto"}
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <img src="https://github.com/FevenSeyfu/Ecommerce-product-page/blob/main/screenshots/Desktop.png" alt="Desktop" style="width: 48%; height: auto;">
+  <img src="https://github.com/FevenSeyfu/Ecommerce-product-page/blob/main/screenshots/mobile_1.png" alt="Mobile" style="width: 48%; height: auto;">
+</div>
+
 # Frontend Mentor - E-commerce product page solution
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).It is a responsive product page with interactive active states and responsive components.
