@@ -58,27 +58,27 @@ const Navbar = () => {
               </li>
             </ul>
           </Modal>
-          <img src={IconLogo} alt="logo"  className="md:pb-6"/>
+          <img src={IconLogo} alt="logo"  className="md:pb-8"/>
 
           <ul className="hidden md:flex flex-row gap-4 text-gray-700">
-            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
+            <li className="border-b-2 border-transparent hover:border-primary-orange pb-6">
               <a href="#">Collections</a>
             </li>
-            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
+            <li className="border-b-2 border-transparent hover:border-primary-orange pb-6">
               <a href="#">Men</a>
             </li>
-            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
+            <li className="border-b-2 border-transparent hover:border-primary-orange pb-6">
               <a href="#">Women</a>
             </li>
-            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
+            <li className="border-b-2 border-transparent hover:border-primary-orange pb-6">
               <a href="#">About</a>
             </li>
-            <li className="hover:border-b-2 hover:border-primary-orange pb-6">
+           <li className="border-b-2 border-transparent hover:border-primary-orange pb-6"> 
               <a href="#">Contact</a>
             </li>
           </ul>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row pb-2 gap-4">
           <button onClick={HandleToggleCart} className="z-5">
             <CartIcon itemCount={itemCount} />
           </button>
